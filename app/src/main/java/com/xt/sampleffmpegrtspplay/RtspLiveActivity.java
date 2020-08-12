@@ -54,13 +54,13 @@ public class RtspLiveActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mRtspPlayer.start();
+        mRtspPlayer.startPlay();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mRtspPlayer.getVideoView().stopPlayback();
+        mRtspPlayer.stopPlay();
     }
 
     @Override

@@ -54,16 +54,25 @@ public class RtspPlayer {
         });
     }
 
-    public void start() {
+    public void startPlay() {
         mLoadingView.showLoading();
         mVideoView.setVideoPath(url);
         mVideoView.start();
+    }
+
+    public void stopPlay() {
+        mVideoView.stopPlayback();
     }
 
     public void release() {
         mVideoView.stopPlayback();
         mVideoView.release(true);
         IjkMediaPlayer.native_profileEnd();
+    }
+
+    public void updateCamera(){
+        mVideoView.pause();
+        mVideoView.start();
     }
 
     public IjkVideoView getVideoView() {
