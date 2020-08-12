@@ -52,11 +52,11 @@ public class RtspPlayer {
                 return true;
             }
         });
-        mVideoView.setVideoPath(url);
     }
 
     public void start() {
         mLoadingView.showLoading();
+        mVideoView.setVideoPath(url);
         mVideoView.start();
     }
 
